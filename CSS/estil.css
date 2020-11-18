@@ -1,107 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'Vampiro One';
+    font-style: normal;
+    font-weight: 400;
+    
+    src: local('Vampiro One'), local('VampiroOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/vampiroone/v3/Ho2Xld8UbQyBA8XLxF1_NYbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+  
+} 
+  
+body{
+    background-image: url(../FOTOS/background.jpg);
+}
 
 header{
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 5%;
 }
 
-.PornPauli{
-    padding-left: 2%;
-
-}
-.numero{
-    padding-top: 17px;
-    padding-left: 2%;
-}
-
-.anal{
-    padding-top: 17px;
-    padding-left: 70%;
-}
-
-ul{
-    display: flex;
-
-}
-
-a{
-    text-decoration: none;
+div a{
+    text-decoration:none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    font-size: 200px;
+    padding-left: 27%;
+    margin-top: 20px;
+   
+    
+  }
+  
+  p:nth-child(1) a{
     color: black;
-}
+    font-family:Monoton;
+  }
+  p:nth-child(1) a{
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+  }
+  p a{
+  color:#ffffff;
+  }
+  
+  @-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff,
+                 0 0 20px  #fff,
+                 0 0 30px  #fff,
+                 0 0 40px  #03b6fd,
+                 0 0 70px  #03b6fd,
+                 0 0 80px  #03b6fd,
+                 0 0 100px #03b6fd,
+                 0 0 150px #03b6fd;
+    }
+    to {
+      text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 15px #fff,
+                 0 0 20px #020101,
+                 0 0 35px #FF1177,
+                 0 0 40px #FF1177,
+                 0 0 50px #FF1177,
+                 0 0 75px #FF1177;
+    }
+  }
+
+
+
 
 li{
     list-style-type: none;
-    margin-right: 1%;
 }
 
-.xxx {
+#menu ul {
+	display:flex;   /* Opcions en horitzontal */
+	list-style: none;   /* Sense vinyeta */
+	font-family: calibri;
+	padding: 0;
+    margin: 0;
+    
+    padding-left: 13%;
+    margin-top: 3%;
+}
+
+#menu a {
+	display: block;
+	width: 70px;
+	padding: 10px 20px;
+	text-decoration: none;
+	color:white;
+	background-color: black;
+    border-right: 1px solid #ccc;
+    border-radius: 2px;
     margin: auto;
-    width: 60%;
-    margin-left: 20%;
-    padding-bottom: 80px;
-    margin-top: 30px;
+   
+    width: 70%;
 
 }
 
-section{
-    padding-right: 2%;
-    padding-left: 3%;
-    background-color: rgb(209, 203, 203);
-    margin-left: 25px;
-    width: 18%;
-    border: solid black solid;
-    border-radius: 10px;
-    
-    
-}
+#menu a:hover {
+	background-color: black;
+    color:white;
+ 
+}	
+#menu li{
+    margin-left: 10%;
+    width: 200px;
 
-
-.text {
-    display: flex;
-
-}
-
-.link {
     text-align: center;
-    color: white;
-    padding-top: 10px;
-    float: left;
-    padding-left: 8px;
-}
-.learn{
-    height: 40px;
-    background-color: black;
-    border-radius: 10px;
-    width: 100px;
-    margin-bottom: 10px;
+    font-family:Monoton;
+    font-size: 20px;
 }
 
-article{
-    display: flex;
+
+#menu ul li ul {
+	display: none;
+    opacity: 0.9;
+    
 }
 
-footer{ 
-    display: flex;
-    margin-top: 20px;
-}
-div{
-    width: 50%;
-
-}
-
-.img_xs{
-    float: right;
-    padding-right: 45px;
-}
-
-h3{
-    padding-left: 35px;
-}
-
-a:hover{
-
-    color: red;
-}
-
-.negrita{
-    font-weight: bolder;
+#menu ul li a:hover + ul, #menu ul li ul:hover {
+    display: block;
+   
 }
